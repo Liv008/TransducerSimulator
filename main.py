@@ -408,7 +408,7 @@ def calculate_transducer_array_2D_acoustic():
 
 def calculate_pattern_acoustic_GUI(theta,phi):
 
-    lambda_var  = c / f
+    lambdaVar  = c / f
     
     # Element = Monopol
     #-------------------

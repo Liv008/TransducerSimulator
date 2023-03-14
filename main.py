@@ -416,9 +416,9 @@ def calculate_pattern_acoustic_GUI(theta,phi):
         
     # Rectangular patch
     #-------------------
-    A_rect = (math.pi * d_padim_x / lambda_var) * math.cos(phi) * math.sin (theta)
+    A_rect = (math.pi * d_padim_x / lambdaVar) * math.cos(phi) * math.sin (theta)
     B_rect = math.sin(A_rect) / A_rect
-    C_rect = (math.pi * d_padim_y / lambda_var) * math.sin(phi) * math.sin (theta)
+    C_rect = (math.pi * d_padim_y / lambdaVar) * math.sin(phi) * math.sin (theta)
     D_rect = math.sin(C_rect) / C_rect
    
     F_Gr_rect = abs(B_rect * D_rect)
@@ -428,7 +428,7 @@ def calculate_pattern_acoustic_GUI(theta,phi):
     F_Gr_xy = 0
     for dy in range(0,n_y-1):
         for dx in range(0,n_x-1):               
-            F_Gr_xy += en_matrix[dy + 1][dx + 1] * math.exp(0 + ((2.*math.pi /lambda_var)* dx * d_arrspa_x * math.cos(phi) * math.sin(theta) - phase_x_matrix[dy + 1][dx + 1] + (2.*math.pi /lambda_var)* dy * d_arrspa_y * math.sin(phi) * math.sin(theta) - phase_y_matrix[dy + 1][dx + 1])*1j)
+            F_Gr_xy += en_matrix[dy + 1][dx + 1] * math.exp(0 + ((2.*math.pi /lambdaVar)* dx * d_arrspa_x * math.cos(phi) * math.sin(theta) - phase_x_matrix[dy + 1][dx + 1] + (2.*math.pi /lambdaVar)* dy * d_arrspa_y * math.sin(phi) * math.sin(theta) - phase_y_matrix[dy + 1][dx + 1])*1j)
 
     F_Gr_xy = abs(F_Gr_xy)       
         
